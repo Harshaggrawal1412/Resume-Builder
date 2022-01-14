@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>my resume builder</title>
+</head>
+
+<body>
+    <div class="resume-form" style="display: block;" id="formresume">
+        <div class="logo" id="LOGO">
+            <h3>RESUME GENERATOR</h3>
+            <p>By Harsh Aggrawal</p>
+        </div>
+
+        <div class="main-form" id="MAIN-FORM">
+            <div class="form-left" id="FORM-LEFT">
+                <h1 class="formhead">Personal Information</h1>
+                <!-- <form action="#" id="form-left"> -->
+                <label for="namefield">Name</label>
+                <div>
+                    <input type="text" id="namefield" placeholder="Enter Your Full Name">
+                </div><br>
+
+                <label for="dobfield">Date Of Birth</label>
+                <div>
+                    <input type="date" id="dobfield">
+                </div><br>
+
+
+                <label for="agefield">Age</label>
+                <div>
+                    <input type="number" id="agefield" placeholder="Enter Your Age">
+                </div><br>
+
+                <label for="genderfield">Gender</label>
+                <div>
+                    <input type="text" id="genderfield" placeholder="Enter Your Gender">
+                </div><br>
+
+                <label for="photo">Select Your Photo</label>
+                <div>
+                    <input type="file" id="photofield">
+                </div><br>
+
+                <div class="contacts">
+                    <label for="contact-heading">Contact</label>
+                </div><br>
+
+                <label for="contactfield">Phone No.</label>
+                <div>
+                    <input type="number" id="contactfield" placeholder="Enter Your Phone No.">
+                </div><br>
+                <label for="emailfield">Email-Id</label>
+                <div>
+                    <input type="email" id="emailfield" placeholder="Enter Your Email-Id">
+                </div><br>
+
+                <label for="Linkedlnfield">Linkedln Profile</label>
+                <div>
+                    <input type="url" id="Linkedlnfield" placeholder="Enter/Paste Your Profile Link Here">
+                </div><br>
+
+                <label for="githubfield">Github Profile</label>
+                <div>
+                    <input type="url" id="githubfield" placeholder="Enter/Paste Your Profile Link Here">
+                </div><br>
+
+                <label for="Addressfield">Address</label>
+
+                <div>
+                    <textarea type="text" id="Addressfield"
+                        placeholder="House/Flat-no , Locality , Pincode "></textarea>
+                </div>
+
+                <!-- </form> -->
+            </div>
+            <div class="form-right" id="FORM-RIGHT">
+                <h1 class="formhead">Professional Information</h1>
+                <!-- <form action="#" id="form-right"> -->
+                <label for="objectivefield">Self Introduction</label>
+                <div>
+                    <textarea type="text" id="objectivefield" placeholder="Enter About Yourself In Brief"></textarea>
+                </div><br>
+
+                <div id="af">
+                    <label for="academicfield">Academic Qualifications</label><br>
+                    <div>
+                        <textarea class="aff" type="text"
+                            placeholder="Qualification Type, University/College/School, Board, Batch"></textarea>
+                    </div>
+
+                    <div class="btn" id="afaddbutton">
+                        <button onclick="addnewaffield()">Add</button>
+                    </div>
+                </div>
+
+                <div id="we">
+                    <label for="workexperiencefield">Work Experience/Internships</label>
+                    <div>
+                        <textarea type="text" class="wef" id="workexperiencefield"
+                            placeholder="Experience Type, Description , Duration"></textarea>
+                    </div>
+                    <div class="btn" id="weaddbutton">
+                        <button onclick="addnewwefield()">Add</button>
+                    </div>
+                </div>
+
+                <div id="ap">
+                    <label for="projectsfield">Academic Projects</label>
+                    <div>
+                        <textarea type="text" class="apf" id="projectsfield"
+                            placeholder="Project Title, Description"></textarea>
+                    </div>
+                    <div class="btn" id="apaddbutton">
+                        <button onclick="addnewapfield()">Add</button>
+                    </div>
+                </div>
+
+                <div id="cf">
+                    <label for="certificationfields">Seminars/Certifications</label>
+                    <div>
+                        <input type="text" class="cff" id="certificationfield" placeholder="Enter Here">
+                    </div>
+                    <div class="btn" id="cfaddbutton">
+                        <button onclick="addnewcffield()">Add</button>
+                    </div>
+                </div>
+
+                <div id="ts">
+                    <label for="technicalskillsfield"> Technical Skills</label>
+                    <div>
+                        <input type="text" class="tsf" placeholder="E.g. Ms-Word/Tally/C++/Python etc.">
+                    </div>
+                    <div class="btn" id="tsaddbutton">
+                        <button onclick="addnewtsfield()">Add</button>
+                    </div>
+                </div>
+
+                <div id="ps">
+                    <label for="personalskillsfield"> Personal SkillS</label>
+                    <div>
+                        <input type="text" class="psf" placeholder="E.G. Leadership Skills/Event Management etc.">
+                    </div>
+                    <div class="btn" id="psaddbutton">
+                        <button onclick="addnewpsfield()">Add</button>
+                    </div>
+                </div>
+
+                <div id="lf">
+                    <label for="languagefields">Languages Known</label>
+                    <div>
+                        <input type="text" class="lff" id="languagesfield"
+                            placeholder="E.G. Hindi/English/French/German etc.">
+                    </div>
+                    <div class="btn" id="lfaddbutton">
+                        <button onclick="addnewlffield()">Add</button>
+                    </div>
+                </div><br>
+
+                <div>
+                    <label for="declarations">Declaration</label>
+                </div>
+
+                <div id="dec-1">
+                    <label for="dec">“I hereby declare that the details and information given above are complete and
+                        true to the best of my knowledge”</label>
+                    <input type="checkbox">
+                </div>
+                <!-- </form>        -->
+            </div>
+        </div>
+        <div class="btn1" id="BTN1">
+            <button onclick="GENERATECV()" id="generate-cv">Generate Resume</button>
+        </div>
+    </div>
+    <div class="resume-template" style="display: none;" id="templateresume">
+        <div class="container" id="CONTAINER">
+            <div class="topview" id="TOPVIEW">
+                <div class="img" id="IMG1">
+                    <img src="profile.png" id="photoT" alt="profile picture">
+                    <p id="nameT"></p>
+                </div>
+                <div class="contact">
+                    <p id="addressT"></p>
+                    <p id="phoneT"></p>
+                    <p id="mailT"></p>
+                    <a href="#" id="linkedlnT"></a><br>
+                    <a href="#" id="githubT"></a>
+                </div>
+            </div>
+            <div class="about">
+                <p id="objectiveT"></p>
+            </div>
+            <hr>
+
+            <div class="container1" id="CONTAINER1">
+                <div class="container-left">
+                    <div class="headings">
+                        <div>
+                            <label for="academic qualifications">ACADEMIC QUALIFICATION</label>
+                        </div>
+                        <ul id="aqT">
+                            <li> </li>
+                        </ul>
+                    </div><br>
+                    <div class="headings">
+                        <div>
+                            <label for="workexperience">WORK EXPERIENCE / INTERNSHIPS</label>
+                        </div>
+                        <ul id="weT">
+                            <li> </li>
+                        </ul>
+                    </div><br>
+
+                    <div class="headings">
+                        <div>
+                            <label for="academic projects">ACADEMIC PROJECTS</label>
+                        </div>
+                        <ul id="apT">
+                            <li> </li>
+                        </ul>
+                    </div><br>
+
+                    <div class="headings">
+                        <div>
+                            <label for="seminars">SEMINARS / CERTIFICATIONS</label>
+                        </div>
+                        <ul id="semT">
+                            <li> </li>
+
+                        </ul>
+                    </div><br>
+                </div>
+                <hr>
+                <div class="container-right" id="CONTAINER-RIGHT">
+                    <div class="headings">
+                        <div>
+                            <label for="technicalskills">TECHNICAL SKILLS</label>
+                        </div>
+                        <ul id="tsT">
+                            <li> </li>
+                        </ul>
+                    </div><br>
+                    <div class="headings">
+                        <div>
+                            <label for="personalskills">PERSONAL SKILLS</label>
+                        </div>
+                        <ul id="psT">
+                            <li></li>
+                        </ul>
+                    </div><br>
+                    <div class="headings">
+                        <div>
+                            <label for="languages">LANGUAGES KNOWN</label>
+                        </div>
+                        <ul id="langT">
+                            <li> </li>
+
+                        </ul>
+                    </div><br>
+                    <hr />
+
+                    <div class="headings">
+                        <div>
+                            <label for="aboutme">PERSONAL INFORMATION</label>
+                        </div>
+                    </div><br>
+
+                    <div class="sublabels">
+                        <label for="dob" id="dob">Date Of Birth : </label>
+                        <p id="dobT"></p>
+                    </div>
+
+                    <div class="sublabels">
+                        <label for="age" id="age">AGE : </label>
+                        <p id="ageT"></p>
+                    </div>
+
+                    <div class="sublabels">
+                        <label for="gender" id="gender">GENDER : </label>
+                        <p id="genderT"></p>
+                    </div><br>
+
+                </div>
+            </div>
+        </div>
+        <div class="btn1">
+            <button onclick="PRINTCV('CONTAINER')" id="print-cv">Print Resume</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
